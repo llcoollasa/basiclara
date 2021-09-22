@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout>
 
-<head>
-    <title>My blog posts</title>
-    <link href="/styles.css" rel="stylesheet" />
-</head>
+    <x-slot name="title">
+        Custom Title
+    </x-slot>
 
-<body>
-    <header>
-        This is a blog
-    </header>
     <article>
         <h1><a href="/posts/3">Post Three</a></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis id sapiente quis repellendus suscipit
@@ -22,10 +16,6 @@
     </article>
 
     <a href="/">Home</a>
-    <footer>
-        <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="">
-        You can find me on github
-    </footer>
-</body>
 
-</html>
+
+</x-layout>

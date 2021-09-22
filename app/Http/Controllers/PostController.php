@@ -16,7 +16,7 @@ class PostController extends Controller
         switch ($post) {
             case 1:
                 # code...
-                return view('posts.first');
+                return view('posts.first', [ 'err' => false ]);
             case 2:
                 # code...
                 return view('posts.second');
