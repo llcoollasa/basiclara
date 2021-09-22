@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* 
+    Without using blade template functions
+*/
+Route::get('/', [PostController::class, 'index']);
+Route::get('/posts/{post}', [PostController::class, 'view']);
+
+/* 
+    Using blade template features
+*/
+// Route::get('/v2', [PostController::class, 'posts']);
+// Route::get('/v2/posts/{post}', [PostController::class, 'single']);
