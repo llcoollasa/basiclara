@@ -21,8 +21,7 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/{post}', [PostController::class, 'view']);
 
-/* 
-    Using blade template features
-*/
-// Route::get('/v2', [PostController::class, 'posts']);
+Route::get('/all', [PostController::class, 'all']);
+Route::post('/article', [PostController::class, 'store']);
+
 // Route::get('/v2/posts/{post}', [PostController::class, 'single']);
