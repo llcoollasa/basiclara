@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,8 @@ Route::get('/all', [PostController::class, 'all']);
 Route::post('/article', [PostController::class, 'store']);
 
 // Route::get('/v2/posts/{post}', [PostController::class, 'single']);
+
+Route::resource('products', ProductController::class);
+Route::get('product-test', [ProductController::class, 'test']);
+
+
